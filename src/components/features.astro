@@ -1,0 +1,44 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+
+const sponsors = [
+  {
+    title: "SPONSOR NAME",
+    description:
+      "Descripción breve del servicio del Sponsor Oficial de velocidad en Tierra",
+    icon: "mdi:heart",
+  },
+  {
+    title: "SPONSOR NAME",
+    description:
+      "Descripción breve del servicio del Sponsor Oficial de velocidad en Tierra",
+    icon: "mdi:heart",
+  },
+  {
+    title: "SPONSOR NAME",
+    description:
+      "Descripción breve del servicio del Sponsor Oficial de velocidad en Tierra",
+    icon: "mdi:heart",
+  },
+];
+---
+
+<ContentSection title="Sponsors" id="sponsors">
+  <Fragment slot="lead">
+    Auspiciantes oficiales del <span class="text-primary"> evento </span>
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      sponsors.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
+            <Icon name={icon} />
+          </div>
+          <p class="text-xl font-extrabold text-center">{title}</p>
+          <p class="text-sm text-center text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

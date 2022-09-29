@@ -1,0 +1,39 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import CompatibilityList from "~/components/compatibility-list.astro";
+
+const fechas = [
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+  {
+    title: "A confirmar",
+    icon: "icon-park-outline:file-date",
+  },
+];
+---
+
+<ContentSection title="Próximas fechas" id="next-dates">  
+  <CompatibilityList
+    title="Fechas"
+    data={fechas}
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+</ContentSection>
